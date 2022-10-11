@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* td {
+            border: 1px solid gray;
+            padding: 3px 5px;
+        } */
+        /* 5时间的例子 */
+        p {
+            font: 14px normal arial, verdana, helvetica;
+        }
+    </style>
+    <script>
+        function telltime() {
+        var out="";
+        var now=new Date();
+        out+="<br />Date: "+now.getDate();
+        out+="<br />Month: "+now.getMonth();
+        out+="<br />Year: "+now.getFullYear();
+        out+="<br />Hours: "+now.getHours();
+        out+="<br />Minutes: "+now.getMinutes();
+        out+="<br />Seconds: "+now.getSeconds();
+        document.getElementById("div1").innerHTML=out;
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 5.1与用户交互 -->
+    <!-- <SCript>
+        var answer = confirm("do you want to continue?");
+        if (answer) {
+            var name = prompt("what is your name?","Jone");
+            alert("hello "+name);
+        }
+    </SCript> -->
+    <!-- 5.2根据id选择元素 -->
+    <!-- <div id = "div1">
+        <p>记录学习js的一天</p>
+    </div>
+    <script>
+        //更改盒子里面的内容
+        document.getElementById("div1").innerHTML = "<p>我很充实</p>"
+    </script> -->
+    <!-- 5.4使用navigator -->
+    <!-- <script>
+        document.write("<table>");
+        document.write("<tr><td>appName</td><td>" + navigator.appName + "</td></tr>");
+        document.write("<tr><td>appCodeName</td><td>" + navigator.appCodeName
+            + "</td></tr>");
+        document.write("<tr><td>appVersion</td><td>" + navigator.appVersion
+            + "</td></tr>");
+        document.write("<tr><td>language</td><td>" + navigator.language
+            + "</td></tr>");
+        document.write("<tr><td>cookieEnabled</td><td>" + navigator.cookieEnabled
+            + "</td></tr>");
+        document.write("<tr><td>cpuClass</td><td>" + navigator.cpuClass
+            + "</td></tr>");
+        document.write("<tr><td>onLine</td><td>" + navigator.onLine + "</td></tr>");
+        document.write("<tr><td>platform</td><td>" + navigator.platform
+            + "</td></tr>");
+        document.write("<tr><td>No of Plugins</td><td>" + navigator.plugins.length
+            + "</td></tr>");
+        document.write("</table>");
+    </script> -->
+    The current date and time are:<br />
+    <div id="div1"></div>
+    <script>
+        telltime(); 
+    </script>
+    <input type="button" onclick="location.reload()" value="Refresh" />
+</body>
+
+</html>

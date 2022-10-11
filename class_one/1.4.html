@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+</head>
+
+<body>
+    <!-- 4.1作用域 -->
+    <!-- <script>
+        //全局变量
+        var a = 10;
+        var b = 10;
+        function showVars() {
+            //函数变量
+            var a = 20; //声明一个新的局部变量 'a' 
+            b = 20; //改变全局变量'b'的值
+            return "Local variable 'a' = " + a + "\nGlobal variable'b' = " + b;
+        }
+        var message = showVars();
+        alert(message + "\nGlobal variable'a' = " + a + "\nGlobal variable'a' = " + b);
+    </script> -->
+    <!-- <script>
+        var x = 100
+        function myfuntion(x){
+            var y = x;
+            if(x>50){
+                // var y = 10;
+                let y = 10
+                alert("Inner y = "+ y);//10
+            }
+            alert("Outer y = "+ y)//vay y时显示 10 let 时 100
+        }
+    </script> -->
+    <script>
+        // < !--4.2箭头函数-- >
+        //一个语句不用花括号，多个语句加花括号
+        var sum = (x,y,z) => alert(x+y+z);
+    </script>
+    <input type="button" onclick="sum(3,4,5)" value="Click Me">
+    <!-- 4.3设置默认参数 -->
+    <!-- 与python一致 -->
+</body>
+
+</html>
