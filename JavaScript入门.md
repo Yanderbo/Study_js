@@ -8,7 +8,7 @@
 
 - A.window 和 document对象
 
-![image-20221011171120820](D:\study_web\Study_js\image\1.A.png)
+![image-20221011171120820](image\1.A.png)
 
 - B.对象表示法
 
