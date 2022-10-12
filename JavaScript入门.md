@@ -8,7 +8,7 @@
 
 - A.window 和 document对象
 
-![image-20221011171120820](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221011171120820.png)
+![image-20221011171120820](D:\study_web\Study_js\image\1.A.png)
 
 - B.对象表示法
 
@@ -217,7 +217,7 @@
 
 - D.使用location对象
 
-  - ![image-20221011201628995](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221011201628995.png)
+  - ![image-20221011201628995](D:\study_web\Study_js\image\5.D.png)
   - 用location对象导航
     - 直接设置href
       - `location.href = 'www.newpage.com'`
@@ -252,11 +252,11 @@
 
 - F.数学方法
 
-  - ![image-20221011204553276](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221011204553276.png)
+  - ![image-20221011204553276](D:\study_web\Study_js\image\5.F.png)
   - 常数
     - 
 
-![image-20221011204622384](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221011204622384.png)
+![image-20221011204622384](D:\study_web\Study_js\image\5.F2.png)
 
 - G.关键词with
 
@@ -431,7 +431,7 @@
 
 调试台：`ctrl+shift+j`可以打开谷歌浏览器调试台
 
-![image-20221012225035098](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221012225035098.png)
+![image-20221012225035098](D:\study_web\Study_js\image\6.D.png)
 
 - E.布尔值
   - true（非零）   false（零）
