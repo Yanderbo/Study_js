@@ -8,7 +8,7 @@
 
 - A.window 和 document对象
 
-<img src="1.A.png">
+<img src="../image/1.A.png">
 
 - B.对象表示法
 
@@ -217,7 +217,7 @@
 
 - D.使用location对象
 
-  - <img src="5.D.png">
+  - <img src="../image/5.D.png">
   - 用location对象导航
     - 直接设置href
       - `location.href = 'www.newpage.com'`
@@ -252,11 +252,11 @@
 
 - F.数学方法
 
-  - <img src="5.F.png">
+  - <img src="../image/5.F.png">
   - 常数
     - 
 
-<img src="5.F2.png">
+<img src="../image/5.F2.png">
 
 - G.关键词with
 
@@ -431,7 +431,7 @@
 
 调试台：`ctrl+shift+j`可以打开谷歌浏览器调试台
 
-<img src="6.D.png">
+<img src="../image/6.D.png">
 
 - E.布尔值
   - true（非零）   false（零）
