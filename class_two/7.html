@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作字符串</title>
+</head>
+
+<body>
+    <!-- 7.1 字符串 -->
+    <!-- <script>
+        // concat   链接字符串
+        var string1 = "The quick brown fox ";
+        var string2 = "jumps over the lazy dog";
+        var longString = string1.concat(string2);//The quick brown fox jumps over the lazy dog
+        //返回值是长句子，并不改变str1,str2
+        //alert(longString)
+
+        // indexOf  找第一个
+        var str1 = "The quick brown fox";
+        //alert(str1.indexOf('fox')); //返回 16(从零开始) 
+        //alert(str1.indexOf('dog')); //返回-1(找不到返回-1)
+        //lastIndexIf() 找最后一个
+
+        //repeat 返回重复次数
+        var inStr = "lots and ";
+        var outStr = str.repeat(3); // outStr contains ' lots and lots and lots and '
+
+        // replace 替换
+        var string1 = "The quick brown fox";
+        var string2 = string1.replace("brown", "orange"); //string2 现在是"the quick orange fox"
+
+        // split()方法把字符串分解为多个子字符串的一个数组，并且返回这个新数组。
+        var string1 = "The quick brown fox ";
+        var newArray = string1.split(" ");
+        //['The', 'quick', 'brown', 'fox', '']
+
+        // substr() 提取字符
+        //一个参数，提取到尾部
+        //两个参数，提取第二个参数个
+        var string1 = "The quick brown fox";
+        var sub1 = string1.substr(4, 11); //提取"quick brown" 
+        var sub2 = string1.substr(4); //提取"quick brown fox"
+
+        //toLowerCase()和 toUpperCase()方法把字符串转换为全部小写或全部大写。
+        var string1 = "The quick brown fox";
+        var sub1 = string1.toLowerCase(); //sub1 的内容是"the quick brown fox" 
+        var sub2 = string1.toUpperCase(); //sub2 的内容是"THE QUICK BROWN FOX"
+    </script> -->
+
+    <!-- 字符串扫描 -->
+    <!-- <script>
+        function detectSpam(input) {
+            input = input.toLowerCase();
+            return input.indexOf("fake");
+        }
+
+        var text = prompt("what do you want send","");
+        alert(detectSpam(text));
+    </script> -->
+
+    <!-- 7.2模板字符串 -->
+    <script>
+        var name =prompt("what is your name?","Jion");
+        var classname =prompt("which class do you want to enter?","Math");
+        alert(`Hello , ${name} ! Welcome to our class ${classname}!`)
+        //Hello , Jion ! Welcome to our class Math!
+    </script>
+</body>
+
+</html>
