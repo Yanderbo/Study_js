@@ -538,3 +538,145 @@
   - 字符串用两个反单引号而不是一对单引号(``)
 
   - 可以忽略换行
+
+### 第8章 数组
+
+- A.数组
+
+  - 创建数组
+
+    - `var myArray = new Array();`
+    - `var myArray = [];`
+
+  - 初始化
+
+    - `var myArray = ["1","2"];`
+    - var myArray[0] = '1'
+
+  - length
+
+    - myArray.length
+      - 总比最大索引大1（有几个元素都行）
+
+  - 数组的方法
+
+    - <img src = "image/8.A.png">
+
+  - 案例
+
+    - ```html
+      <!DOCTYPE html>
+      <html lang="en">
+      
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>8.1数组</title>
+          <!-- 案例 -->
+          <script>
+      
+              function wrangleArray() {
+                  var sentence = "JavaScript is a really cool language";
+                  //写出它
+                  document.getElementById("div1").innerHTML = "<p>" + sentence + "</p>";
+                  //转换为一个数组
+                  var words = sentence.split(" ");//以空格为划分
+                  // 删除'really'和'cool'，并且添加'powerful' 
+                  var message = words.splice(3, 2, "powerful");
+                  //删除索引3开始的两个索引
+                  //返回删除的内容
+                  alert('Removed words: ' + message);
+                  // 将数组转换为一个字符串，并写出它
+                  //原数组改变
+                  document.getElementById("div2").innerHTML = "<p>" + words.join(" ") + "</p>";
+              } 
+          </script>
+      </head>
+      
+      <body>
+          <!-- id引用 -->
+          <div id="div1"></div>
+          <div id="div2"></div>
+          <script>wrangleArray();</script>
+      </body>
+      
+      </html>
+      ```
+
+- B.遍历数组
+
+  - foreach()
+
+    - 接收一个函数作为参数，将数组的每一个元素均传递进函数
+    - 无法返回数组
+
+  - map()
+
+    - 和foreach()差不多
+    - 有返回数组
+
+  - for-of
+
+    - 将值一次给变量
+
+  - ```html
+        <script>
+            // foreach()
+            var num = [1,2,3,4,5];
+            function cube(x){
+                alert(x*x*x);
+            }
+            num.forEach(cube);
+    
+            // map
+            var num = [1,2,3,4,5];
+            function cube(x){
+                return(x*x*x);
+            }
+            var newnum = num.map(cube);//[1,8,27,64,125]
+            alert(newnum)
+    
+            // for-of
+            var nums = [1,2,3,4]
+            for (var num of nums){
+                alert(num)
+            }
+        </script>
+    ```
+
+- C.三点表示法
+
+  - 作用
+
+    - 展开数组
+    - 传递数组
+    - 收集数据
+
+  - ```html
+        <!-- 8.3 三点表示法 -->
+        <!-- 展开数组 -->
+        <script>
+            var array1 = ['apple', 'banana', 'pear'];
+            var array2 = ['orange', 'cherry', 'fig'];
+            var array2 = ['orange', ...array1, 'cherry', 'fig'];
+            //alert(array2)//['orange', 'apple', 'banana', 'pear', 'cherry', 'fig']
+        </script>
+    
+        <!-- 传递数组 -->
+        <script>
+            var num = [4,2,89,2,5,0]
+            alert(Math.min(...num))//将num全部传入
+        </script>
+    
+        <!-- 收集数据 -->
+        <script>
+            var [a,b,...c] = [1,2,3,4,5,6,7,8]
+            //a=1,b=2,c=[3,4,5,6,7,8]
+        </script>
+    ```
+
+- D.多维数组
+
+  - 在一维数组的基础上拓展(与其他语言一致)
+

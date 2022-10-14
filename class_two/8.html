@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+
+    <!-- 8.1 数组 -->
+    <!-- <script>
+        var myArray1 = [];
+        var myArray2 = [];
+        //myArray1[30] = 'Monday';
+        //alert(myArray1.length)    //31
+
+        // concat 合并数组
+        myArray1 = ['Monday', 'Tuesday'];
+        myArray2 = ['Saterday', 'Fruday'];
+        outArray = myArray1.concat(myArray2)    //['Monday','Tuesday','Saterday','Fruday']
+
+        //join 合并为一个字符串 以输入隔开
+        outArray = outArray.join("")  //MondayTuesdaySaterdayFruday
+
+        //toString 合并为一个字符串，用逗号隔开
+        outArray = outArray.toString()  //Monday,Tuesday,Saterday,Fruday
+
+        //indexOf 返回指定元素第一次出现的索引
+        myArray1.indexOf("Tuesday") //1
+
+        // lastIndexOf 返回指定元素最后一次出现的索引
+
+        //slice 提取子数组
+        var momArray = ['0', '1', '2', '3', '4', '5']
+        momArray.slice(1, 3)//从索引1到索引3（不包含3）['1','2']
+        momArray.slice(-3, 5)//负数道标倒数第几个
+
+        //sort 按照字母顺序排序
+        var myArray3 = ['r', 'q', 'j', 'a', 'f']
+        //alert(myArray3.sort())//a,f,j,q,r
+        myArray3 = ['3', '8', '12']
+        //alert(myArray3.sort())//12,3,8只按照字母顺序
+
+        //splice()
+        momArray.splice(2, 1, '6')//从第一个数字索引开始，删除第二个数字个元素，插进抵三个元素
+            //momArray变成['0','1','6','3','4','5']     '2'是返回值
+            //会改变原数组
+    </script> -->
+
+    <!-- 案例 -->
+    <!-- <script>
+
+        function wrangleArray() {
+            var sentence = "JavaScript is a really cool language";
+            //写出它
+            document.getElementById("div1").innerHTML = "<p>" + sentence + "</p>";
+            //转换为一个数组
+            var words = sentence.split(" ");//以空格为划分
+            // 删除'really'和'cool'，并且添加'powerful' 
+            var message = words.splice(3, 2, "powerful");
+            //删除索引3开始的两个索引
+            //返回删除的内容
+            alert('Removed words: ' + message);
+            // 将数组转换为一个字符串，并写出它
+            //原数组改变
+            document.getElementById("div2").innerHTML = "<p>" + words.join(" ") + "</p>";
+        } 
+    </script> -->
+
+    <!-- 8.2遍历数组 -->
+    <!-- <script>
+        // foreach()
+        var num = [1,2,3,4,5];
+        function cube(x){
+            alert(x*x*x);
+        }
+        num.forEach(cube);
+
+        // map
+        var num = [1,2,3,4,5];
+        function cube(x){
+            return(x*x*x);
+        }
+        var newnum = num.map(cube);//[1,8,27,64,125]
+        alert(newnum)
+
+        // for-of
+        var nums = [1,2,3,4]
+        for (var num of nums){
+            alert(num)
+        }
+    </script> -->
+
+    <!-- 8.3 三点表示法 -->
+    <!-- 展开数组 -->
+    <script>
+        var array1 = ['apple', 'banana', 'pear'];
+        var array2 = ['orange', 'cherry', 'fig'];
+        var array2 = ['orange', ...array1, 'cherry', 'fig'];
+        //alert(array2)//['orange', 'apple', 'banana', 'pear', 'cherry', 'fig']
+    </script>
+
+    <!-- 传递数组 -->
+    <script>
+        var num = [4,2,89,2,5,0]
+        alert(Math.min(...num))//将num全部传入
+    </script>
+
+    <!-- 收集数据 -->
+    <script>
+        var [a,b,...c] = [1,2,3,4,5,6,7,8]
+        //a=1,b=2,c=[3,4,5,6,7,8]
+    </script>
+</head>
+
+<body>
+    <!-- 8.1案例 -->
+    <!-- id引用 -->
+    <!-- <div id="div1"></div>
+    <div id="div2"></div>
+    <script>wrangleArray();</script> -->
+
+
+</body>
+
+</html>
