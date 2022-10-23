@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用JavaScript处理事件</title>
+</head>
+
+<body>
+    <!-- 9.2 -->
+    <!-- 内联事件处理器 -->
+    <!-- <a href="https://www.w3.org/" onclick="alert('hello W3C!')">World Wide Web
+        Consortium (W3C)</a> -->
+
+    <!-- 多个事件处理器 -->
+    <!-- <a href="https://www.w3.org/" id="a1">World Wide Web Consortium (W3C)</a>
+    <script>
+        var myLink = document.getElementById('a1');
+        function sayHello() {
+            alert('hello W3C!');
+        }
+        myLink.addEventListener('click', sayHello);
+        myLink.addEventListener('click', updateCounter);
+    </script> -->
+
+    <!-- 9.3event -->
+    <!-- 阻止默认行为 -->
+    <script>
+        window.onload = function () {
+            var Go = document.getElementById('a1');
+            var NoGo = document.getElementById('a2');
+            function permitAccess() {
+                alert('Go right ahead - have fun!');
+            }
+            function refuseAccess(e) {
+                alert('Sorry, but you are not yet authorized to follow this link.');
+                //阻止默认行为
+                e.preventDefault();
+            }
+            Go.addEventListener('click', permitAccess);
+            NoGo.addEventListener('click', refuseAccess);
+        }
+    </script>
+
+    <!-- 事件冒泡和捕获 -->
+    <a href="https://www.google.com" target=_blank id="a1">Go to Google</a><br />
+    <a href="https://www.google.com" target=_blank id="a2">DO NOT go to Google</a>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程序控制</title>
+</head>
+
+<body>
+    <!--10.1 垃圾邮箱 -->
+    <!-- <script>
+        function detectSpam(input) {
+            input = input.toLowerCase();
+            if (input.indexOf("fake") < 0) {
+                return false;
+            }
+            return true;
+        }
+        var mystring = prompt("Enter a string");
+        alert(detectSpam(mystring)); 
+    </script> -->
+
+    <!-- if等号 -->
+    <!-- <script>
+        var x = 2; //给变量赋值
+        if (x == "2")... //结果为 true，因为字符串"2"会被解释为数值 2 
+            if (x === "2")...  //结果为 false，因为字符串与数值类型不同
+
+                var x = 0; //给变量赋值 0 
+        if (!x) ... //结果为 true 
+        if (x === false) ... //结果为 false
+    </script> -->
+
+    <!-- 多个if -->
+    <!-- <script>
+        if (temperature < 64) {
+            message = "Turn on the heating!";
+            heatingStatus = "on";
+            fanStatus = "off";
+        } else if (temperature > 72) {
+            message = "Turn on the fan!";
+            heatingStatus = "off";
+            fanStatus = "on";
+        } else {
+            message = "Temperature is OK";
+            heatingStatus = "off";
+            fanStatus = "off";
+        }
+    </script> -->
+
+    <!-- switch语句 -->
+    <!-- <script>
+        switch (color) {
+            case "red":
+                message = "Stop!";
+                break;
+            case "yellow":
+                message = "Pass with caution";
+                break;
+            case "green":
+                message = "Come on through";
+                break;
+            default:
+                message = "Traffic light out of service. Pass only with great care";
+        }
+    </script> -->
+
+    <!-- for...in -->
+    <!-- <script>
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        var message = "";
+        //类似python
+        for (i in days) {
+            message += 'Day ' + i + ' is ' + days[i] + '\n';
+        }
+        alert(message); 
+    </script> -->
+
+    <!-- 10.3 计时器 -->
+    <!-- setTimeout() -->
+    <!-- <script>
+        function hide(elementId) {
+            document.getElementById(elementId).style.display = 'none';
+        }
+        window.onload = function () {
+            setTimeout("hide('id1')", 3000);
+        }
+        var timer1 = setTimeout("hide('id1')", 3000);
+        clearTimeout(timer1);
+    </script>
+
+    <div id="id1">I'm about to disappear!</div> -->
+
+    <!-- <button id="start">开始</button>
+    <button id="stop">结束</button>
+    <div id="box"></div>
+    <script type="text/javascript">
+        var oStart = document.getElementById("start")
+        var oStop = document.getElementById("stop")
+        var oBox = document.getElementById("box")
+        var timer = null
+        // 点击start获取时间 显示在box中
+        oStart.onclick = getTime;
+        function getTime() {
+            var date = new Date()
+            oBox.innerHTML = date.toLocaleString()
+            timer = setTimeout(getTime, 1000)
+        }
+        oStop.onclick = function () {
+            clearTimeout(timer)
+        }
+    </script> -->
+
+
+</body>
+
+</html>

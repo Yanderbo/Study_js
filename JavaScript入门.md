@@ -680,3 +680,138 @@
 
   - 在一维数组的基础上拓展(与其他语言一致)
 
+### 第9章 用JavaScript处理事件
+
+- A.事件的类型
+  - 鼠标事件
+    - <img src="image/9.A.png">
+- B.事件处理器
+  - 内敛事件处理器
+    - 放在标签里面	
+    - `<a href="https://www.w3.org/" onclick="alert('hello W3C!')">World WideWeb Consortium (W3C)</a> `
+  - 作为DOM对象的属性的事件处理器
+  - addEventListener()
+    - 两个参数，第一个注册处理器名字，第二个参数，事件处理函数
+  - 添加多个监听器
+    - 用addEventListener
+- C.event对象
+  - 阻止默认行为
+    - preventDefault()
+  - 事件冒泡和捕获
+    - 冒泡，从内向外
+    - 捕获，从外向内
+  - 关闭冒泡和捕获
+    - `e.stopPropagation(); // 阻止进一步冒泡`
+
+### 第10章 程序控制
+
+- A.if()语句
+
+  - if(条件为真) 执行操作
+
+  - 比较操作符
+
+    - 与其他语言比较符一致
+
+  - 等号
+
+    - 两个等号比较测试值是否相等
+    - 三个等号比较测试值以及类型是否都相等
+
+  - 多个if
+
+    - ```html
+      if (temperature < 64) {
+                  message = "Turn on the heating!";
+                  heatingStatus = "on";
+                  fanStatus = "off";
+              } else if (temperature > 72) {
+                  message = "Turn on the fan!";
+                  heatingStatus = "off";
+                  fanStatus = "on";
+              } else {
+                  message = "Temperature is OK";
+                  heatingStatus = "off";
+                  fanStatus = "off";
+              }
+      ```
+
+    - 与c语言一致
+
+    - 简写
+
+      - （条件) ? [条件为真执行]：[条件为佳执行]
+
+  - switch语句
+
+    - ```html
+       switch (color) {
+                  case "red":
+                      message = "Stop!";
+                      break;
+                  case "yellow":
+                      message = "Pass with caution";
+                      break;
+                  case "green":
+                      message = "Come on through";
+                      break;
+                  default:
+                      message = "Traffic light out of service. Pass only with great care";
+              }
+      ```
+
+  - 逻辑操作符
+
+    - &&  and
+    - || or
+
+- B.循环和控制结构
+
+  - while
+
+    - ```
+      while(判断条件) {
+      	操作语句；
+      }
+      ```
+
+  - do...while
+
+    - ```
+      do {
+      	操作语句；
+      }while(判断条件)
+      ```
+
+  - for
+
+    - ```
+      for(x=0;x<10;x++){
+      	操作语句；
+      }
+      ```
+
+  - break跳出循环
+
+  - for...in
+
+    - ```
+      for(i in 对象){
+      	操作；
+      }
+      ```
+
+    - 在对象属性里循环
+
+    - 类似python for
+
+- C.设置和使用计时器
+
+  - setTimeout(action,delay)
+    - action传入函数或者计算该表达式
+    - delay加载多少毫秒
+  - clearTimeout()
+    - 清除计时器
+  - setInterval(action,delay)
+    - 和setTimeout差不多
+    - 连续性，一致调用，每次间隔delay
