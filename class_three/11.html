@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象编程</title>
+
+    <!-- 创建对象 -->
+    <!-- <script>
+        myNewObject = new Object();
+        myNewObject.info = 'I am a shiny new object';
+        function myFunc() {
+            alert(this.info);
+        }
+        myNewObject.showInfo = myFunc; 
+    </script> -->
+
+    <!-- 函数构造对象，多参数 -->
+    <script>
+        function Person(personName) {
+            this.name = personName;
+            this.info = 'This person is called ' + this.name;
+            this.showInfo = function () {
+                alert(this.info);
+            }
+        }
+        var person1 = new Person('Adam');
+        var person2 = new Person('Eve');
+        //用prototype增加新的方法
+        Person.prototype.sayHello = function () {
+            alert(this.name + " says hello");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 创建对象 -->
+    <!-- 第一个按钮，显示 myNewObject 的 info -->
+    <!-- <input type="button" value="Good showInfo Call" onclick="myNewObject.showInfo()" /> -->
+    <!-- 第二个按钮，全局方法，灭有传入，不存在 -->
+    <!-- <input type="button" value="myFunc Call" onclick="myFunc()" /> -->
+    <!-- 第三个按钮，没有这个方法，报错 -->
+    <!-- <input type="button" value="Bad showInfo Call" onclick="showInfo()" /> -->
+
+
+    <!-- 用函数构造对象 -->
+    <input type="button" value="Show Info on Adam" onclick="person1.showInfo()" />
+    <input type="button" value="Show Info on Eve" onclick="person2.showInfo()" />
+    <input type="button" value="Say Hello Adam" onclick="person1.sayHello()" />
+    <input type="button" value="Say Hello Eve" onclick="person2.sayHello()" />
+
+</html>

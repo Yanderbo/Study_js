@@ -254,9 +254,7 @@
 
   - <img src="image/5.F.png">
   - 常数
-    - 
-
-<img src="image/5.F2.png">
+    - <img src="image/5.F2.png">
 
 - G.关键词with
 
@@ -815,3 +813,77 @@
   - setInterval(action,delay)
     - 和setTimeout差不多
     - 连续性，一致调用，每次间隔delay
+
+## 第三部分 理解JavaScript对象
+
+### 第11章 面向对象编程
+
+- A.认识对象
+
+  - 相当于class（类）
+
+- B.创建对象
+
+  - 创建直接实例
+
+    - JavaScript 有一个内置对象 Object
+      - `myNewObject = new Object(); `
+    - 添加属性
+      - `myNewObject.info = 'I am a shiny new object'; `
+    - 添加方法
+      - `myNewObject.showInfo = myFunc; `
+      - 不加方法（），加括号是把返回值返回给他
+    - 用关键词this
+      - 指向父函数
+
+  - 匿名函数
+
+    - 传递函数
+
+      - ```
+        myNewObject.showInfo = function() { 
+         alert(this.info); 
+        }
+        ```
+
+  - 使用构造函数
+
+    - ```
+      function myObjectType(){ 
+       this.info = 'I am a shiny new object'; 
+       this.showInfo = function(){ 
+      alert(this.info); //显示 info 属性的值
+       } 
+       this.setInfo = function (newInfo) { 
+      this.info = newInfo; //覆盖 info 属性的值
+       } 
+      }
+      ```
+
+  - 加参数
+
+    - ```
+      定义构造函数时可以设置多个参数：
+      function Car(Color, Year, Make, Miles) { 
+       this.color = Color; 
+       this.year = Year; 
+       this.make = Make; 
+       this.odometerReading = Miles; 
+       this.setOdometer = function(newMiles) { 
+      this.odometerReading = newMiles; 
+       } 
+      } 
+      var car1 = new Car("blue", "1998", "Ford", 79500); 
+      var car2 = new Car("yellow", "2004", "Nissan", 56350); 
+      car1.setOdometer(82450);
+      ```
+
+- C.用prototype扩展和继承对象
+
+  - 对象.prototype.新增方法/属性名 = 方法/属性名
+  - 对象.prototype = new 被继承对象()
+
+- D.封装
+
+  - 封装是面向对象编程的一种能力，表示把数据和指令隐藏到对象内部。
+  - 对于 JavaScript 来说，在构造函数内部声明的变量只能在对象内部使用，对于外部来说是不可见的。
