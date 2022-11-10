@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 12.1  语法糖-->
+    <script>
+        class Pet {
+            constructor(animal, name) {
+                this.animal = animal,
+                    this.name = name
+            }
+            setAnimal(newAnimal) {
+                this.animal = newAnimal;
+            }
+            setName(newName) {
+                this.name = newName;
+            }
+            //setter,getter
+            get name() {
+                return this._name;
+            }
+            set name(n) {
+                // 将第一个字母设置为大写，其他的字母保持小写
+                n = n.charAt(0).toUpperCase() + n.slice(1).toLowerCase();
+                this._name = n;
+            }
+        }
+        var myCat = new Pet();//new必不可少
+        myCat.setAnimal("cat");
+        myCat.setName("Sylvester");
+        //Symbol 保证命名的唯一性
+        var myname = Symbol('nickname of pet');
+        //用方括号表示用作属性的键的 symbol
+        myCat[myname] = 'Sylvester';
+        //12.2继承
+        class Dog extends Pet {
+            constructor(name, breed) {
+                //继承Pet相关属性，方法等
+                super(name);
+                this.breed = breed;
+            }
+        }
+    </script>
+</body>
+
+</html>

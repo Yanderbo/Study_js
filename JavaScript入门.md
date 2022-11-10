@@ -887,3 +887,44 @@
 
   - 封装是面向对象编程的一种能力，表示把数据和指令隐藏到对象内部。
   - 对于 JavaScript 来说，在构造函数内部声明的变量只能在对象内部使用，对于外部来说是不可见的。
+
+### 第12章 对象进阶
+
+- A.类
+
+  - getter,setter
+    - 通过使用 get 和 set，我们可以在读取对象的属性（在get 的情况下）或写入对象的属性（在 set 的情况下）时，运行特定代码。
+  - symbol
+    - symbol 一定是唯一的
+    - 就像数组元素一样，不能用点语法来访问作为属性的键的 symbol。必须用方括号语法来访问它们，就像前面的示例中一样。
+
+- B.对象继承
+
+  - extends 关键字用来创建一个类以使其作为另一个类的一个子类
+  - super 关键字使得你能够调用所继承的父对象的功能
+  - 注意
+    - 如果没有在一个子类上定义一个构造函数，将会默认地调用 super 类的构造函数。
+
+- C.使用功能检测
+
+  - 用 if()语句来检测 getElementById()方法是否可用
+
+    - ```js
+      if(document.getElementById){ 
+       myElement = document.getElementById(id); 
+      } else { 
+       // 执行其他操作
+      }
+      ```
+
+  - 与之相关的方法是用 typeof 操作符检测某个 JavaScript 函数是否存在
+
+    - ```
+      if(typeof document.getElementById == 'function'){ 
+       // 这里可以使用 getElementById()方法
+      } else { 
+       // 执行其他操作
+      }
+      ```
+
+      
